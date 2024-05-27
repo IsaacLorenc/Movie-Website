@@ -7,7 +7,7 @@ from flask_login import login_user, login_required, logout_user, current_user, L
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from forms import EditProfileForm
-
+from flask_debugtoolbar import DebugToolbarExtension
 
 ##############################################################################
 app = Flask(__name__)
@@ -19,7 +19,7 @@ app.config['DEBUG'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', "it's a secret")
-
+toolbar = DebugToolbarExtension(app)
 
 login_manager = LoginManager()
 login_manager.login_view = 'login'
