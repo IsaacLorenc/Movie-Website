@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Details{% endblock %}
+{% block content%}
+<div id="user_details">
+    <h1>Your Profile</h1>
+    <div id='first_name' class="form-group">First Name: {{ user.first_name }}</div>
+    <div id='email' class="form-group">Email: {{ user.email }}</div>
+    <div id='username' class="form-group">Username: {{ user.username }}</div>
+</div>
+<div id="edit_button">
+    <a href="/edit" class="btn btn-outline-secondary">Edit Profile</a>
+</div>
+{% endblock %}
