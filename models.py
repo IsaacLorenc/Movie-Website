@@ -32,7 +32,7 @@ class FavoriteMovie(db.Model):
 
 
 
-def connect_db(app):
+def connect_db(app, *args, **kwargs):
     """Connect this database to provided Flask app.
 
     You should call this in your Flask app.
