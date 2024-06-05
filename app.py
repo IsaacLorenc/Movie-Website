@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://movies_ko3c_user:WZCR47o2I8LnTbLYCrCkrnMEDGG8qeEq@dpg-cpadmusf7o1s73afa9k0-a.oregon-postgres.render.com/movies_ko3c'
 migrate = Migrate(app, db)
 
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', "it's a secret")
