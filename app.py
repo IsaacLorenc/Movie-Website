@@ -12,7 +12,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 ##############################################################################
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = (os.environ.get(DATABASE_URL, 'postgresql://movies_ko3c_user:WZCR47o2I8LnTbLYCrCkrnMEDGG8qeEq@dpg-cpadmusf7o1s73afa9k0-a.oregon-postgres.render.com/movies_ko3c'))
+app.config['SQLALCHEMY_DATABASE_URI'] = (os.environ.get(DATABASE_URL, 'postgres://movies_ko3c_user:WZCR47o2I8LnTbLYCrCkrnMEDGG8qeEq@dpg-cpadmusf7o1s73afa9k0-a.oregon-postgres.render.com/movies_ko3c'))
 migrate = Migrate(app, db)
 
 app.config['DEBUG'] = False
